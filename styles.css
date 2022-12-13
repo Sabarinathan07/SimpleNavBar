@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.page-wraper {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+    padding: 0;
+}
+
+.nav-container {
+	/* display: flex; */
+	/* justify-content: space-between; */
+	/* align-items: center; */
+	/* padding: 0 20px; */
+	background-color: #000;
+	/* color: #fff; */
+	/* height: 68px; */
+	overflow: hidden;
+   
+}
+
+.nav-container a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+	float: left;
+	display: block;
+	text-align: center;
+	padding: 20px 26px;
+}
+
+.amazon {
+	background-color: #F08804;
+	color: #fff;
+}
+
+.nav-container .hamburger {
+	display: none;
+}
+
+.account {
+	float: left;
+	overflow: hidden;
+}
+
+.account .account-btn {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 20px 26px;
+	text-decoration: none;
+	font-size: 20px;
+	border: none;
+	outline: none;
+	background-color: inherit;
+	font-family: inherit;
+}
+
+.account-content {
+	display: none;
+	position: absolute;
+	background-color: black;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.account-content a {
+	float: none;
+	color: #fff;
+	padding: 20px 26px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.account-content a:hover {
+	background-color: #F08804;
+	color: #000;
+}
+
+.account:hover .account-content {
+	display: block;
+}
+
+.nav-container a:hover,
+.account:hover .account-btn {
+	background-color: #F08804;
+	color: #000;
+}
+
+.right-alignment{
+    float: right;
+}
+
+@media screen and (max-width: 600px) {
+	.nav-container a:not(:first-child),
+	.account .account-btn {
+		display: none;
+	}
+
+	.nav-container a.hamburger {
+		float: right;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.nav-container.responsive {
+		position: relative;
+	}
+
+	.nav-container.responsive .hamburger {
+		position: absolute;
+        float: left;
+		right: 0;
+		top: 0;
+	}
+
+	.nav-container.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+        padding: 16px 20px;
+
+	}
+
+	.nav-container.responsive .account {
+		float: left;
+	}
+
+	.nav-container.responsive .account-content {
+		position: relative;
+        float: left;
+        
+	}
+
+	.nav-container.responsive .account .account-btn {
+		display: block;
+		width: 100%;
+		text-align: left;
+	}
+
+    .right-alignment{
+        float: left;
+    }
+
+}
